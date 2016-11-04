@@ -6,7 +6,7 @@ Main Dataset
 ---------
 Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news) and organized into different folds for cross-validation. More information can be found under `Data Interpretation` below.
 
-NOTE: Due to github storage limitations, please proceed to this [site](http://benleong.net/ets/verbs) to obtain the inputs and outputs.
+NOTE: Please download the datasets from the [release](https://github.com/EducationalTestingService/metaphor/releases/tag/v1.0) page.
 
 Software
 ---------
