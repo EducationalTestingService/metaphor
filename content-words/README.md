@@ -7,6 +7,8 @@ Main Dataset
 ---------
 Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news) and organized into different folds for cross-validation. More information can be found under `Data Interpretation` below.
 
+NOTE: Due to github storage limitations, please proceed to this [site](http://benleong.net/ets/content-words) to obtain the inputs and outputs.
+
 Software
 ---------
 * [Stanford Thrift](https://github.com/EducationalTestingService/stanford-thrift/releases), 0.5-operational (Python 2.7) for creating parsing/tagging servers
@@ -46,7 +48,7 @@ Data Interpretation
 
 Reference Paper
 ---------
-[Supervised Word-Level Metaphor Detection: Experiments with Concreteness and Reweighting of Examples](https://aclweb.org/anthology/W/W15/W15-1402.pdf) 
+[Supervised Word-Level Metaphor Detection: Experiments with Concreteness and Reweighting of Examples](https://aclweb.org/anthology/W/W15/W15-1402.pdf)
 Beata Beigman Klebanov, Ben Leong, Michael Flor,
 in Proceedings of the Third Workshop on Metaphor in NLP (Meta4NLP), Denver, CO, 2015
 
