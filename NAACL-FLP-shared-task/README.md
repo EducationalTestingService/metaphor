@@ -40,30 +40,31 @@ The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is 
 
 Data Interpretation
 ---------
-In our baseline feature sets, each token has a <b>unique</b> identifier. For example, the token ID `a1e-fragment01_1_4_reveals` denotes `a1e-fragment01` text, sentence `1`, word offset `4`. To cross-reference this token ID in vuamc_corpus.csv, simply space tokenize the sentence_txt and count starting from the first word.
+In our baseline feature sets, each token has a <b>unique</b> identifier. For example, the token ID `a1e-fragment01_1_4_reveals` denotes text `a1e-fragment01`, sentence `1`, word offset `4`. To cross-reference this token ID in vuamc_corpus.csv, simply space tokenize the corresponding sentence and count starting from the first word.
 
 ```
 >>> "Latest corporate unbundler M_reveals laid-back M_approach : Roland Franklin , who is M_leading a 697m pound break-up bid for DRG , talks M_to Frank Kane".split()
 ['Latest', 'corporate', 'unbundler', 'M_reveals', 'laid-back', 'M_approach', ':', 'Roland', 'Franklin', ',', 'who', 'is', 'M_leading', 'a', '697m', 'pound', 'break-up', 'bid', 'for', 'DRG', ',', 'talks', 'M_to', 'Frank', 'Kane']
 ```
 
+When submitting results for evaluation in the share tasks, you will be asked to provide a listing of the token ID (minus the word) and the predictions (0 for non-metaphor, 1 for metaphor). For example, a submission for the verbs-only track would look like this:
 
-We provide a 1-1 mapping between our feature tokens and those that are extracted from the original XML file.
+```
+...
+a1e-fragment01_1_4,1
+a1e-fragment01_1_13,1
+a1e-fragment01_11_5,1
+a1e-fragment01_12_3,1
+a1e-fragment01_12_21,0
+a1e-fragment01_12_33,1
+...
+```
 
+Replication of our baseline ML results
+---------
+For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. In our baseline experiments, we used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll). In this repository, we provided a set of training and testing data that are subsets from the `news` genre as a walkthrough example.
 
-* Each instance in our data is indexed in a way that makes it easy to locate it in the original VUA distribution, as follows.
-* Each text from VUA is processed in a manner consistent with the original annotation intentions. That means, a sentence is enclosed within a pair of `<s>..</s>` tags, and a word is enclosed within a pair of `<w>..</w>` tags, and extracted as such. There are cases where multiple tokens are enclosed as a word e.g. `<w lemma="that is to say" type="AV0">That is to say</w>`. In this case, we used tokens to denote the ordering of words in a multiword expression.
- * The `id` of an instance can be decomposed using the underscore as delimiter, and decoded as follows. For example, in `a3m-fragment02_85_41_28_1_head`:
-  - `a3m-fragment02` is the text segment id
-  - `85` is the original sentence number provided by VUA (continuous counting across texts)
-  - `41` is the sentence offset we computed, starting with 1 for each new text, using <s>...</s> markups in the corpus.
-  - `28` is the word offset we computed, starting with 1 for each new sentence, using <w>...</w> marksup in the corpus.
-  - `1` is the sub-word offset, inside a single <w>...</w>. It always starts with 1 for unigram, and increases for multiword expressions
-  - `head` is the actual token (a verb in this case)
-* `inputs/traintest` contains the training and testing feature files and values by genre
-* `inputs/traintest_all/all_genres/train` contains the training feature files and values for all genres. Note that testing is still done on the `inputs/traintest` by genre
-* `inputs/xvals/*/train` contains the training AND testing feature files and values, grouped by genres.
-* `outputs/metaphor_labels_predictions_traintest.csv` contains the instance_id, true metaphor label (`y`), as well as predictions made by different weighting regimes i.e. AutoWeighting (`uptc_auto`) and OptimizedWeighting (`uptc_optimized`) of the feature set: unigram + pos + topic + concreteness binning bias-up/down + concreteness difference binning bias-up/down. Similarly, `outputs/metaphor_labels_predictions_traintest_all.csv` is generated for the scenario where training is done using data from all genres, but testing is performed on individual genres. For `outputs/metaphor_labels_predictions_xvals.csv`, the predicted label for each instance is a result of cross-validation within each genre by training on (n-1)th folds and testing on the nth fold.
+SKLL can be installed via Conda. You can find installation instructions for [conda](https://github.com/conda/conda)
 
 
 
