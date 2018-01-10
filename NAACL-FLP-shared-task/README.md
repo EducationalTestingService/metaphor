@@ -5,12 +5,37 @@ This repository contains the dataset used in the [shared task on metaphor detect
 
 Main Dataset
 ---------
-Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news) and organized into different folds for cross-validation.
-
+Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml) using this set of [software](https://github.com/EducationalTestingService/metaphor/tree/master/content-words#software). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news).
 
 Task Details
 ---------
-You can either participate in the metaphor prediction task for verbs only, all part-of-speech only, or both. We provide baseline feature sets for both tasks.
+You can either participate in the metaphor prediction task for verbs only, all part-of-speech only, or both.
+
+Parsing VUAMC.XML for additional features
+---------
+To participate in the shared tasks, you can either use our baseline feature sets as a starting point, or generate your own feature sets by parsing the original VUAMC.xml.
+
+To parse the VUAMC.xml, first download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip), then unzip it. You should get the file `2541/VUAMC.xml`. After that, run the following command (in Python 3.x):
+
+```
+python vua_xml_parser.py
+```
+
+This will generate `vuamc_corpus.csv` with 16203 lines in the following format:
+
+```
+"txt_id","sentence_id","sentence_txt"
+"a1e-fragment01","1","Latest corporate unbundler M_reveals laid-back M_approach : Roland Franklin , who is M_leading a 697m pound break-up bid for DRG , talks M_to Frank Kane"
+"a1e-fragment01","2","By FRANK KANE"
+"a1e-fragment01","3","IT SEEMS that Roland Franklin , the latest unbundler to appear in the UK , has M_made a M_fatal error M_in the preparation of his £697m break-up bid for stationery and packaging group DRG ."
+"a1e-fragment01","4","He has not properly investigated the M_target 's dining facilities ."
+"a1e-fragment01","5","The 63-year-old M_head of Pembridge Investments , M_through which the bid is being M_mounted says , ‘ M_rule number one M_in M_this business is : the more luxurious the luncheon rooms at M_headquarters , the more inefficient the business ’ ."
+"a1e-fragment01","6","If he had M_taken his own rule seriously , he would have found out that DRG has a very M_modest self-service canteen at its Bristol M_head office ."
+"a1e-fragment01","7","There are other M_things he has , M_on his own M_admission , not fully investigated , like the value of the DRG properties , or which M_part of the DRG business he would M_keep M_after the break up ."
+```
+
+
+We provide a 1-1 mapping between our feature tokens and those that are extracted from the original XML file.
 
 
 Data Interpretation
