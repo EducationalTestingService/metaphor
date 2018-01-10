@@ -1,32 +1,17 @@
 # Shared Task on Metaphor Detection
 
 
-This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), co-located with NAACL 2018. We provide a script to parse VUAMC.xml, the main dataset used in the competition, a set of features used to construct the baseline classification model for predictions of metaphor/non-metaphor classes at the word level, and instructions on how to replicate our published results. As additional information, we also provide software specifications, experimental feature types and values.
+This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), co-located with NAACL 2018. We provide a script to parse VUAMC.xml, the main dataset used in the competition, a set of features used to construct the baseline classification model for prediction of metaphor/non-metaphor classes at the word level, and instructions on how to replicate our published results. As additional information, we also provide software specifications used to generate our baseline feature types and values.
 
 Main Dataset
 ---------
-Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news) and organized into different folds for cross-validation. More information can be found under `Data Interpretation` below.
+Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news) and organized into different folds for cross-validation.
 
-NOTE: Please download the datasets from the [release](https://github.com/EducationalTestingService/metaphor/releases/tag/v1.0) page.
 
-Software
+Task Details
 ---------
-* [Stanford Thrift](https://github.com/EducationalTestingService/stanford-thrift/releases), 0.5-operational (Python 2.7) for creating parsing/tagging servers
-* Tagger and Parser in [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/) 3.6.0
- * Tagger Model : english-bidirectional-distsim.tagger
- * Parser Model : edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz
- * Parser output representation : Universal dependencies, enhanced
-* [Gensim](https://radimrehurek.com/gensim) 0.10.3 for topic modeling features
-* [NLTK](http://www.nltk.org/) 3.0.3 for parsing VUA (Python 2.7); 3.2 for features generation (Python 3.4) through lemmatization and stopwords filtering
-* [SciKit-Learn Laboratory](https://github.com/EducationalTestingService/skll) 1.1.1 for machine learning experiments
+You can either participate in the metaphor prediction task for verbs only, all part-of-speech only, or both. We provide baseline feature sets for both tasks.
 
-
-Text Preprocessing
----------
-For stopword removal, we padded the `NLTK English` stopwords list with the following additional stopwords:
-```python
-AUXWORDS = ['am','be', 'is', 'was', 'been', 'being', 'were', 'are', 'have', 'has', 'had', 'having', 'do', 'did', 'does', 'done', 'doing', 'didnt','doesnt','dont','havent', 'hasnt','couldnt','wont','shouldnt', 'wouldnt','cant','cannot','hadnt','shant','arent','isnt','mightnt','mustnt','werent','wasnt', 'neednt','oughtnt','couldve','mightve', 'mustve','shouldve','would','wouldve']
-```
 
 Data Interpretation
 ---------
