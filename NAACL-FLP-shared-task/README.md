@@ -32,14 +32,25 @@ This will generate `vuamc_corpus.csv` with 16203 lines in the following format:
 "a1e-fragment01","5","The 63-year-old M_head of Pembridge Investments , M_through which the bid is being M_mounted says , ‘ M_rule number one M_in M_this business is : the more luxurious the luncheon rooms at M_headquarters , the more inefficient the business ’ ."
 "a1e-fragment01","6","If he had M_taken his own rule seriously , he would have found out that DRG has a very M_modest self-service canteen at its Bristol M_head office ."
 "a1e-fragment01","7","There are other M_things he has , M_on his own M_admission , not fully investigated , like the value of the DRG properties , or which M_part of the DRG business he would M_keep M_after the break up ."
+...
+```
+
+The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
+
+
+Data Interpretation
+---------
+In our baseline feature sets, each token has a <b>unique</b> identifier. For example, the token ID `a1e-fragment01_1_4_reveals` denotes `a1e-fragment01` text, sentence `1`, word offset `4`. To cross-reference this token ID in vuamc_corpus.csv, simply space tokenize the sentence_txt and count starting from the first word.
+
+```
+>>> "Latest corporate unbundler M_reveals laid-back M_approach : Roland Franklin , who is M_leading a 697m pound break-up bid for DRG , talks M_to Frank Kane".split()
+['Latest', 'corporate', 'unbundler', 'M_reveals', 'laid-back', 'M_approach', ':', 'Roland', 'Franklin', ',', 'who', 'is', 'M_leading', 'a', '697m', 'pound', 'break-up', 'bid', 'for', 'DRG', ',', 'talks', 'M_to', 'Frank', 'Kane']
 ```
 
 
 We provide a 1-1 mapping between our feature tokens and those that are extracted from the original XML file.
 
 
-Data Interpretation
----------
 * Each instance in our data is indexed in a way that makes it easy to locate it in the original VUA distribution, as follows.
 * Each text from VUA is processed in a manner consistent with the original annotation intentions. That means, a sentence is enclosed within a pair of `<s>..</s>` tags, and a word is enclosed within a pair of `<w>..</w>` tags, and extracted as such. There are cases where multiple tokens are enclosed as a word e.g. `<w lemma="that is to say" type="AV0">That is to say</w>`. In this case, we used tokens to denote the ordering of words in a multiword expression.
  * The `id` of an instance can be decomposed using the underscore as delimiter, and decoded as follows. For example, in `a3m-fragment02_85_41_28_1_head`:
