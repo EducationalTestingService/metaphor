@@ -73,26 +73,45 @@ SKLL can be installed via Conda. You can find installation instructions for [con
 Next, run
 ```
 # create a conda environment with python 3.6
-conda create -n naacl_flp python=3.6
+>conda create -n naacl_flp python=3.6
 
 # activate the conda environment
-source activate naccl_flp
+>source activate naccl_flp
 ```
 
 Install SKLL v1.5
 ```
-conda install -c desilinguist skll
+(naacl_flp)>conda install -c desilinguist skll
 ```
 
+Run the example
+```
+(naacl_flp)>export SKLL_MAX_CONCURRENT_PROCESSES=1
+(naacl_flp)>run_experiment toy_set.cfg
+```
 
+Once the experiment is completed, you should be able to look into `results` directory and get approximately the following confusion matrix:
+
+```
++---+------+-----+-----------+--------+-----------+
+|   |    0 |   1 | Precision | Recall | F-measure |
++---+------+-----+-----------+--------+-----------+
+| 0 | [74] |   9 |     0.851 |  0.892 |     0.871 |
++---+------+-----+-----------+--------+-----------+
+| 1 |   13 | [4] |     0.308 |  0.235 |     0.267 |
++---+------+-----+-----------+--------+-----------+
+
+```
 
 Reference Paper
 ---------
+[Semantic Classifications for Detection of Verb Metaphors](http://aclweb.org/anthology/P/P16/P16-2017.pdf)
+([erratum](paper/metaphor_acl_2016_erratum.pdf))
+Beata Beigman Klebanov, Ben Leong, E. Dario Gutierrez, Ekaterina Shutova and Michael Flor, in Proceedings of the 54th Meeting of the Association for Computational Linguistics (ACL), 2016
+
 [Supervised Word-Level Metaphor Detection: Experiments with Concreteness and Reweighting of Examples](https://aclweb.org/anthology/W/W15/W15-1402.pdf)
 Beata Beigman Klebanov, Ben Leong, Michael Flor,
 in Proceedings of the Third Workshop on Metaphor in NLP (Meta4NLP), Denver, CO, 2015
-
-Please have a look at the [Release Note with Up-To-Date Benchmarks](paper/meta_2015_release_note.pdf).
 
 
 Related Papers
