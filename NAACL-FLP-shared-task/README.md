@@ -66,9 +66,23 @@ a1e-fragment01_12_33,1
 
 Replication of our baseline results
 ---------
-For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. In our baseline experiments, we used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll). In this repository, we provided a set of training and testing data that are subsets from the `news` genre as a walkthrough example.
+For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. In our baseline experiments, we used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll). We provided a set of training and testing data that are subsets from the `news` genre as a walkthrough example.
 
 SKLL can be installed via Conda. You can find installation instructions for [conda](https://github.com/conda/conda)
+
+Next, run
+```
+# create a conda environment with python 3.6
+conda create -n naacl_flp python=3.6
+
+# activate the conda environment
+source activate naccl_flp
+```
+
+Install SKLL v1.5
+```
+conda install -c desilinguist skll
+```
 
 
 
