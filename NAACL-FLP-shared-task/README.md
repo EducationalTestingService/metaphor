@@ -76,10 +76,10 @@ SKLL can be installed via Conda. You can find installation instructions at the [
 Next, run
 ```
 # create a conda environment with python 3.6
->conda create -n naacl_flp python=3.6
+>conda create -n naacl_flp
 
 # activate the conda environment
->source activate naccl_flp
+>source activate naacl_flp
 ```
 
 Install SKLL v1.5
