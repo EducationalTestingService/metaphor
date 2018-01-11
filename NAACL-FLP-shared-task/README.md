@@ -75,7 +75,7 @@ SKLL can be installed via Conda. You can find installation instructions at the [
 
 Next, run
 ```
-# create a conda environment with python 3.6
+# create a conda environment just for this shared task
 >conda create -n naacl_flp
 
 # activate the conda environment
