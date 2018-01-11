@@ -49,9 +49,12 @@ In our baseline feature sets, each token has a <b>unique</b> identifier across t
 
 Again, only <b>verbs</b> and <b>content words</b> determined by us are considered in the evaluation of the shared task submissions. While you have the full sentences for each text in vuamc_corpus.csv, please generate predictions only for those covered in the datasets.
 
+We have provided two lists of tokens for the training phase i.e. `verb_training.txt` and `all_pos_training.txt`
+We will provide two lists of tokens for the testing phase i.e. `verb_testing.txt` and `all_pos_testing.txt`
+
 Result Submission
 ---------
-When submitting results for evaluation in the share tasks, you will be asked to provide a listing of the token ID (minus the tailing word) and the predictions (0 for non-metaphor, 1 for metaphor). For example, a submission for the verbs-only track would look like this:
+When submitting results for evaluation in the share tasks, you will be asked to provide a listing of the token ID and its prediction (0 for non-metaphor, 1 for metaphor). For example, a submission for the verbs-only track would look like this:
 
 ```
 ...
