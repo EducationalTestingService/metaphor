@@ -47,9 +47,9 @@ In our baseline feature sets, each token has a <b>unique</b> identifier across t
 ['Latest', 'corporate', 'unbundler', 'M_reveals', 'laid-back', 'M_approach', ':', 'Roland', 'Franklin', ',', 'who', 'is', 'M_leading', 'a', '697m', 'pound', 'break-up', 'bid', 'for', 'DRG', ',', 'talks', 'M_to', 'Frank', 'Kane']
 ```
 
-Again, only <b>verbs</b> and <b>content words</b> determined by us are considered in the evaluation of the shared task submissions. While you have the full sentences for each text in vuamc_corpus.csv, please generate predictions only for those covered in the datasets.
+Again, only <b>verbs</b> and <b>content words</b> determined by us are considered in the evaluation of the shared task submissions. While you have the full sentences for each text in `vuamc_corpus.csv`, please generate predictions only for those covered in the datasets.
 
-We have provided two lists of tokens for the training phase i.e. `verb_training.txt` and `all_pos_training.txt`
+We have provided two lists of tokens for the training phase i.e. `verb_training.txt` and `all_pos_training.txt`.
 We will provide two lists of tokens for the testing phase i.e. `verb_testing.txt` and `all_pos_testing.txt`
 
 Result Submission
@@ -93,7 +93,7 @@ Run the example
 (naacl_flp)>run_experiment toy_set.cfg
 ```
 
-Once the experiment is completed, you should be able to look into `results` directory and get the following confusion matrix in the *results file. Note that the numbers reported here are based on a very small subset of data and for illustration purposes only.
+Once the experiment is completed, you should be able to look into `results` directory and get the following confusion matrix in the *results file. Note that the numbers reported here are based on a very small subset of data and for illustration purposes only. We will release our baseline results once the testing phase begins.
 
 ```
 +---+------+-----+-----------+--------+-----------+
