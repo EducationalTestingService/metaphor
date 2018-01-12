@@ -145,6 +145,7 @@ $ source activate naacl_flp
 
 4. Navigate to the working directory, then type:
 ```
+(naacl_flp)$ mkdir log results predictions models
 (naacl_flp)$ export SKLL_MAX_CONCURRENT_PROCESSES=1
 (naacl_flp)$ run_experiment toy_set.cfg
 ```
