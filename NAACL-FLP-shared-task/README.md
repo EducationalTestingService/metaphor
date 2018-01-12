@@ -5,11 +5,11 @@ This repository contains the dataset used in the [shared task on metaphor detect
 
 Main Dataset
 ---------
-Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). There are altogether 117 texts covering four genres (academic, conversation, fiction, news).
+For the shared task, we are using the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml) (VUA). There are altogether 117 texts covering four genres (academic, conversation, fiction, news).
 
 Task Details
 ---------
-You can either participate in the metaphor prediction tracks for verbs only, all part-of-speech only, or both.
+You can either participate in the metaphor prediction tracks for verbs only, all part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
 
 Instructions
 ---------
@@ -41,9 +41,9 @@ Archive:  naacl_flp_starter_kit.zip
 
 $ python vua_xml_parser.py
 
-# vuamc_corpus.csv is generated
 $ ls
-2541 2541.xml 2541.zip naacl_flp_starter_kit.zip setup.cfg vua_xml_parser.py vuamc_corpus.csv
+# vuamc_corpus.csv is generated
+2541 2541.xml 2541.zip naacl_flp_starter_kit.zip setup.cfg vua_xml_parser.py <b>vuamc_corpus.csv</b>
 ```
 
 4. `vuamc_corpus.csv` has 16203 lines in the following format. The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
@@ -91,30 +91,50 @@ For example, the token identifier `a1e-fragment01_1_4` denotes text `a1e-fragmen
 
 5. During evaluation, token lists (without gold labels) for the test sets will be made available. The task will be to generate predictions for the test verb and all part-of-speech tokens in the same format as `verb_tokens.csv` and `all_pos_tokens.csv`, and submitted to CodaLab for evaluation.
 
-OPTIONAL
+Baseline
 ---------
-For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. In our baseline experiments, we used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll). To illustrate how SKLL can be used, we provided a toy example here.
+For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. We have used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll) to perform classification for the training and testing sets with published results, using a set of features outlined below.
+
+```
+1. unigram (U), Meta4NLP 2014
+2. part-of-speech tags (P), Meta4NLP 2014
+3. topical LDA (T), Meta4NLP 2014
+4. concreteness (C-BiasUp, C-BiasDown, CCDB-BiasUpDown)， Meta4NLP 2015
+5. unigram lemmas (U-lemmaByPOS), ACL 2016
+6. wordnet (wordnet-class), ACL 2016
+7. verbnet (verbnet-vn), ACL 2016
+8. corpus (corpus), ACL 2016
+```
+
+A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase.
+
+SKLL
+---------
+
+To illustrate how SKLL can be used, we provided a toy example here.
 
 SKLL can be installed via Conda. You can find installation instructions at the [anaconda](https://docs.anaconda.com/anaconda/install/) page.
 
-Next, run
+1. To start, download the skll datasets (TO INSERT DOWNLOAD LINK), then unzip it into the working directory.
+
+2. Next, run
 ```
 # create a conda environment just for this shared task
->conda create -n naacl_flp
+$ conda create -n naacl_flp
 
 # activate the conda environment
->source activate naacl_flp
+$ source activate naacl_flp
 ```
 
-Install SKLL v1.5
+3. Install SKLL v1.5
 ```
-(naacl_flp)>conda install -c desilinguist skll
+(naacl_flp)$ conda install -c defaults -c conda-forge -c desilinguist python=3.6 skll
 ```
 
-Run the example
+5. Navigate to the working directory, then type:
 ```
-(naacl_flp)>export SKLL_MAX_CONCURRENT_PROCESSES=1
-(naacl_flp)>run_experiment toy_set.cfg
+(naacl_flp)$ export SKLL_MAX_CONCURRENT_PROCESSES=1
+(naacl_flp)$ run_experiment toy_set.cfg
 ```
 
 Once the experiment is completed, you should be able to look into `results` directory and get the following confusion matrix in the *results file. Note that the numbers reported here are based on a very small subset of data and for illustration purposes only. We will release our baseline results once the testing phase begins.
@@ -130,7 +150,7 @@ Once the experiment is completed, you should be able to look into `results` dire
 
 ```
 
-Reference Paper
+Reference Papers
 ---------
 [Semantic Classifications for Detection of Verb Metaphors](http://aclweb.org/anthology/P/P16/P16-2017.pdf)
 ([erratum](paper/metaphor_acl_2016_erratum.pdf))
@@ -140,9 +160,6 @@ Beata Beigman Klebanov, Ben Leong, E. Dario Gutierrez, Ekaterina Shutova and Mic
 Beata Beigman Klebanov, Ben Leong, Michael Flor,
 in Proceedings of the Third Workshop on Metaphor in NLP (Meta4NLP), Denver, CO, 2015
 
-
-Related Papers
----------
 [Different Texts, Same Metaphors: Unigrams and Beyond](http://anthology.aclweb.org/W/W14/W14-2302.pdf)
 Beata Beigman Klebanov, Ben Leong, Michael Heilman and Michael Flor,
 in Proceedings of the Second Workshop on Metaphor in NLP (Meta4NLP), Baltimore, MD, 2014
