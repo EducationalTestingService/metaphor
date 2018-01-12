@@ -11,6 +11,10 @@ Task Details
 ---------
 You can either participate in the metaphor prediction tracks for verbs only, all content part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
 
+Issues
+---------
+Should you have any difficulties with the shared task, please file an [issue](https://github.com/EducationalTestingService/metaphor/issues), and we will get back to you promptly.
+
 Instructions
 ---------
 
