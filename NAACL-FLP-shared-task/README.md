@@ -21,7 +21,7 @@ $ mkdir naacl_flp
 $ cd naacl_flp
 ```
 
-2. Download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip) and unzip it in the working directory
+2. Download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip) and unzip it in the working directory.
 ```
 $ unzip 2541.zip
 Archive:  2541.zip
@@ -32,7 +32,7 @@ Archive:  2541.zip
   inflating: 2541.xml
 ```
 
-3. Download the [starter kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_starter_kit.zip) and unzip it in the working directory. Then, run it (using Python 3.x)
+3. Download the [starter kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_starter_kit.zip) and unzip it in the working directory. Then, run it (using Python 3.x). The parser script uses [lxml](http://lxml.de/installation.html). If you do not have it, simply do `pip install lxml` before running it.
 <pre>
 $ unzip naacl_flp_starter_kit.zip
 Archive:  naacl_flp_starter_kit.zip
@@ -46,7 +46,7 @@ $ ls
 2541 2541.xml 2541.zip naacl_flp_starter_kit.zip setup.cfg vua_xml_parser.py <b>vuamc_corpus_train.csv</b>
 </pre>
 
-4. `vuamc_corpus_train.csv` has 16203 lines in the following format. The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
+4. `vuamc_corpus_train.csv` has 12123 lines in the following format. The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
 
 ```
 "txt_id","sentence_id","sentence_txt"
