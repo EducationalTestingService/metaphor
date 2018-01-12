@@ -13,6 +13,98 @@ import configparser
 import re
 import lxml.etree as ET
 
+TRAINING_PARTION = [
+    'a1e-fragment01',
+    'a1f-fragment06',
+    'a1f-fragment07',
+    'a1f-fragment08',
+    'a1f-fragment09',
+    'a1f-fragment10',
+    'a1f-fragment11',
+    'a1f-fragment12',
+    'a1g-fragment26',
+    'a1g-fragment27',
+    'a1h-fragment05',
+    'a1h-fragment06',
+    'a1j-fragment34',
+    'a1k-fragment02',
+    'a1l-fragment01',
+    'a1m-fragment01',
+    'a1n-fragment09',
+    'a1n-fragment18',
+    'a1p-fragment01',
+    'a1p-fragment03',
+    'a1x-fragment03',
+    'a1x-fragment04',
+    'a1x-fragment05',
+    'a2d-fragment05',
+    'a38-fragment01',
+    'a39-fragment01',
+    'a3c-fragment05',
+    'a3e-fragment03',
+    'a3k-fragment11',
+    'a3p-fragment09',
+    'a4d-fragment02',
+    'a6u-fragment02',
+    'a7s-fragment03',
+    'a7y-fragment03',
+    'a80-fragment15',
+    'a8m-fragment02',
+    'a8n-fragment19',
+    'a8r-fragment02',
+    'a8u-fragment14',
+    'a98-fragment03',
+    'a9j-fragment01',
+    'ab9-fragment03',
+    'ac2-fragment06',
+    'acj-fragment01',
+    'ahb-fragment51',
+    'ahc-fragment60',
+    'ahf-fragment24',
+    'ahf-fragment63',
+    'ahl-fragment02',
+    'ajf-fragment07',
+    'al0-fragment06',
+    'al2-fragment23',
+    'al5-fragment03',
+    'alp-fragment01',
+    'amm-fragment02',
+    'as6-fragment01',
+    'as6-fragment02',
+    'b1g-fragment02',
+    'bpa-fragment14',
+    'c8t-fragment01',
+    'cb5-fragment02',
+    'ccw-fragment03',
+    'cdb-fragment02',
+    'cdb-fragment04',
+    'clp-fragment01',
+    'crs-fragment01',
+    'ea7-fragment03',
+    'ew1-fragment01',
+    'fef-fragment03',
+    'fet-fragment01',
+    'fpb-fragment01',
+    'g0l-fragment01',
+    'kb7-fragment10',
+    'kbc-fragment13',
+    'kbd-fragment07',
+    'kbh-fragment01',
+    'kbh-fragment02',
+    'kbh-fragment03',
+    'kbh-fragment09',
+    'kbh-fragment41',
+    'kbj-fragment17',
+    'kbp-fragment09',
+    'kbw-fragment04',
+    'kbw-fragment11',
+    'kbw-fragment17',
+    'kbw-fragment42',
+    'kcc-fragment02',
+    'kcf-fragment14',
+    'kcu-fragment02',
+    'kcv-fragment42']
+
 
 def read_config(configFilename):
   parser = configparser.ConfigParser()
@@ -117,16 +209,15 @@ def extract_xml_tag_text(
           t.get('lemma').split()) == 1:
     final_token = re.sub(' ', '', final_token)
 
-
   # cleaning corrupted tokens due to annotator errors
-  if final_token and re.search('^>[A-Za-z]+',final_token):
-    final_token = re.sub('>','',final_token)
-  if final_token and re.search('^<[A-Za-z]+',final_token):
-    final_token = re.sub('<','',final_token)
-  if final_token and re.search('^=[A-Za-z]+',final_token):
-    final_token = re.sub('=','',final_token)
-  if final_token and re.search('^/[A-Za-z]+',final_token):
-    final_token = re.sub('/','',final_token)
+  if final_token and re.search('^>[A-Za-z]+', final_token):
+    final_token = re.sub('>', '', final_token)
+  if final_token and re.search('^<[A-Za-z]+', final_token):
+    final_token = re.sub('<', '', final_token)
+  if final_token and re.search('^=[A-Za-z]+', final_token):
+    final_token = re.sub('=', '', final_token)
+  if final_token and re.search('^/[A-Za-z]+', final_token):
+    final_token = re.sub('/', '', final_token)
 
   return final_token
 
@@ -141,7 +232,6 @@ def process_sentence(
         function_override):
 
   sentence_id = sentence.get('n')
-  #print('sentence id : ' + sentence_id)
   tokens_lst = []
   tokens = sentence.findall('*')
   for t in tokens:
@@ -203,7 +293,8 @@ def extract_xml(
 
   for txt in texts:
     txt_id = txt.attrib[xml_namespace + 'id']
-    #print('txt id : ' + txt_id)
+    if txt_id not in TRAINING_PARTION:
+      continue
     sents = txt.findall('.//' + tei_namespace + 's')
     for s in sents:
       sentence_id, sentence_txt = process_sentence(
@@ -226,7 +317,7 @@ def main():
       subtypes,
       function_override)
 
-  with open('vuamc_corpus.csv', 'w') as csvfile:
+  with open('vuamc_corpus_train.csv', 'w') as csvfile:
     fieldnames = [
         'txt_id',
         'sentence_id',
