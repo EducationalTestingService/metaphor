@@ -39,24 +39,14 @@ Archive:  naacl_flp_starter_kit.zip
   inflating: setup.cfg
   inflating: vua_xml_parser.py
 
-$python vua_xml_parser.py
+$ python vua_xml_parser.py
 
-$ls
-2541                      2541.xml                  2541.zip                  naacl_flp_starter_kit.zip setup.cfg                 vua_xml_parser.py         vuamc_corpus.csv
+# vuamc_corpus.csv is generated
+$ ls
+2541 2541.xml 2541.zip naacl_flp_starter_kit.zip setup.cfg vua_xml_parser.py vuamc_corpus.csv
 ```
 
-Parsing VUAMC.XML for additional features
----------
-To participate in the shared tasks, you can either use our baseline feature sets as a starting point, or generate your own feature sets by parsing the original VUAMC.xml.
-
-To parse the VUAMC.xml, first download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip), then unzip it. You should get the file `2541/VUAMC.xml`. After that, run the following command (in Python 3.x):
-
-```
-python vua_xml_parser.py
-```
-
-This will generate `vuamc_corpus.csv` with 16203 lines in the following format:
-
+4. `vuamc_corpus.csv` has 16203 lines in the following format. The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
 ```
 "txt_id","sentence_id","sentence_txt"
 "a1e-fragment01","1","Latest corporate unbundler M_reveals laid-back M_approach : Roland Franklin , who is M_leading a 697m pound break-up bid for DRG , talks M_to Frank Kane"
@@ -69,7 +59,7 @@ This will generate `vuamc_corpus.csv` with 16203 lines in the following format:
 ...
 ```
 
-The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
+
 
 
 Data Interpretation
