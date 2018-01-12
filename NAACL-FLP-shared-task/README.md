@@ -9,7 +9,7 @@ For the shared task, we are using the [VU Amsterdam Metaphor Corpus](http://ota.
 
 Task Details
 ---------
-You can either participate in the metaphor prediction tracks for verbs only, all part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
+You can either participate in the metaphor prediction tracks for verbs only, all content part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
 
 Instructions
 ---------
@@ -89,7 +89,7 @@ For example, the token identifier `a1e-fragment01_1_4` denotes text `a1e-fragmen
 ['Latest', 'corporate', 'unbundler', 'M_reveals', 'laid-back', 'M_approach', ':', 'Roland', 'Franklin', ',', 'who', 'is', 'M_leading', 'a', '697m', 'pound', 'break-up', 'bid', 'for', 'DRG', ',', 'talks', 'M_to', 'Frank', 'Kane']
 ```
 
-5. During evaluation, token lists (without gold labels) for the test sets will be made available. The task will be to generate predictions for the test verb and all part-of-speech tokens in the same format as `verb_tokens.csv` and `all_pos_tokens.csv`, and submitted to CodaLab for evaluation.
+5. During evaluation, token lists (without gold labels) for the test sets will be made available. The task will be to generate predictions for the test verb and all part-of-speech tokens in the same format as `verb_tokens.csv` and `all_pos_tokens.csv`, and submit it to CodaLab for evaluation.
 
 Baseline
 ---------
