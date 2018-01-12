@@ -1,15 +1,44 @@
 # Shared Task on Metaphor Detection
 
 
-This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), co-located with NAACL 2018. We provide a script to parse VUAMC.xml, the main dataset used in the competition, a set of features used to construct the baseline classification model for prediction of metaphor/non-metaphor classes at the word level, and instructions on how to replicate our published results. As additional information, we also provide software specifications used to generate our baseline feature types and values.
+This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), co-located with NAACL 2018.
 
 Main Dataset
 ---------
-Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml) using this set of [software](https://github.com/EducationalTestingService/metaphor/tree/master/content-words#software). While replicating our results does not require repeating the above processes on the dataset, you will need to download a copy of the dataset to extract any additional features. There are altogether 117 texts covering four genres (academic, conversation, fiction, news).
+Our features are obtained by extraction, parsing and tagging of the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml). There are altogether 117 texts covering four genres (academic, conversation, fiction, news).
 
 Task Details
 ---------
-You can either participate in the metaphor prediction task for verbs only, all part-of-speech only, or both.
+You can either participate in the metaphor prediction tracks for verbs only, all part-of-speech only, or both.
+
+Instructions
+---------
+
+1. Create a working directory, say `naacl_flp`
+
+```
+$ mkdir naacl_flp
+$ cd naacl_flp
+```
+
+2. Download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip) and unzip it in the working directory
+```
+$ unzip 2541.zip
+Archive:  2541.zip
+  inflating: 2541/VUAMC.odd
+  inflating: 2541/VUAMC.rnc
+  inflating: 2541/VUAMC.rng
+  inflating: 2541/VUAMC.xml
+  inflating: 2541.xml
+```
+
+3. Download the [NAACL FLP starter kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_starter_kit.zip) and unzip it in the working directory
+```
+$ unzip naacl_flp_starter_kit.zip
+Archive:  naacl_flp_starter_kit.zip
+  inflating: setup.cfg
+  inflating: vua_xml_parser.py
+```
 
 Parsing VUAMC.XML for additional features
 ---------
