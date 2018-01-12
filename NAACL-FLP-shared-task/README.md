@@ -96,6 +96,8 @@ Baseline
 For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. We have used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll) to perform classification for the training and testing sets with published results, using a set of features outlined below.
 
 ```
+feature (SKLL feature name), published venue
+====================
 1. unigram (U), Meta4NLP 2014
 2. part-of-speech tags (P), Meta4NLP 2014
 3. topical LDA (T), Meta4NLP 2014
@@ -106,7 +108,13 @@ For the shared task, you are welcome to use any machine/deep learning toolkit to
 8. corpus (corpus), ACL 2016
 ```
 
-A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase.
+A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase. <b>NOTE</b>b>: You can download and use any of these features for building your model for the shared task, along with other interesting features you may conceive. The format of each SKLL feature file is:
+
+```
+{"y": LABEL, "x": {FEATURE:VALUE}, "id": TOKENID}
+```
+
+Note that when combining several feature sets, the feature name has to be unique across all feature files.
 
 SKLL
 ---------
@@ -115,7 +123,7 @@ To illustrate how SKLL can be used, we provided a toy example here.
 
 SKLL can be installed via Conda. You can find installation instructions at the [anaconda](https://docs.anaconda.com/anaconda/install/) page.
 
-1. To start, download the skll datasets (TO INSERT DOWNLOAD LINK), then unzip it into the working directory.
+1. To start, download the baseline features and SKLL configuration file (TO INSERT DOWNLOAD LINK), then unzip it into the working directory.
 
 2. Next, run
 ```
