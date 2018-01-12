@@ -67,6 +67,10 @@ $ unzip naacl_flp_gold_labels.zip
 Archive:  naacl_flp_gold_labels.zip
   inflating: all_pos_tokens.csv
   inflating: verb_tokens.csv
+
+$ wc -l all_pos_tokens.csv verb_tokens.csv
+  72611 all_pos_tokens.csv
+  17240 verb_tokens.csv
 ```
 
 Each token list has a format similar to the following, a <b>unique</b> token identifier followed by a binary gold label (0 for non-metaphor, 1 for metaphor):
