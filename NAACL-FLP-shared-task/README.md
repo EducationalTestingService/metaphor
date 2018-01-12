@@ -108,7 +108,7 @@ feature (SKLL feature name), published venue
 8. corpus (corpus), ACL 2016
 ```
 
-A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase. <b>NOTE</b>b>: You can download and use any of these features for building your model for the shared task, along with other interesting features you may conceive. The format of each SKLL feature file is:
+A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase. <b>NOTE</b>: You can download and use any of these features for building your model for the shared task, along with other interesting features you may conceive. The format of each SKLL feature file is:
 
 ```
 {"y": LABEL, "x": {FEATURE:VALUE}, "id": TOKENID}
@@ -139,7 +139,7 @@ $ source activate naacl_flp
 (naacl_flp)$ conda install -c defaults -c conda-forge -c desilinguist python=3.6 skll
 ```
 
-5. Navigate to the working directory, then type:
+4. Navigate to the working directory, then type:
 ```
 (naacl_flp)$ export SKLL_MAX_CONCURRENT_PROCESSES=1
 (naacl_flp)$ run_experiment toy_set.cfg
