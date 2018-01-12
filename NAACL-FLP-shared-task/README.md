@@ -91,7 +91,7 @@ For example, the token identifier `a1e-fragment01_1_4` denotes text `a1e-fragmen
 
 5. During evaluation, token lists (without gold labels) for the test sets will be made available. The task will be to generate predictions for the test verb and all part-of-speech tokens in the same format as `verb_tokens.csv` and `all_pos_tokens.csv`, and submit it to CodaLab for evaluation.
 
-Baseline
+Baseline (OPTIONAL)
 ---------
 For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. We have used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll) to perform classification for the training and testing sets with published results, using a set of features outlined below.
 
@@ -116,7 +116,7 @@ A combination of these features will be used to build a logistic classification 
 
 Note that when combining several feature sets, the `FEATURE_NAME` has to be unique across all feature files.
 
-SKLL
+SKLL (OPTIONAL)
 ---------
 
 To illustrate how SKLL can be used, we provided a toy example here.
