@@ -101,20 +101,20 @@ feature (SKLL feature name), published venue
 1. unigram (U), Meta4NLP 2014
 2. part-of-speech tags (P), Meta4NLP 2014
 3. topical LDA (T), Meta4NLP 2014
-4. concreteness (C-BiasUp, C-BiasDown, CCDB-BiasUpDown)， Meta4NLP 2015
-5. unigram lemmas (U-lemmaByPOS), ACL 2016
-6. wordnet (wordnet-class), ACL 2016
-7. verbnet (verbnet-vn), ACL 2016
-8. corpus (corpus), ACL 2016
+4. concreteness (C-BiasUp, C-BiasDown, CCDB-BiasUpDown), Meta4NLP 2015 (CUpDown as C-BiasUp + C-BiasDown)
+5. unigram lemmas (UL), ACL 2016
+6. wordnet (WordNet), ACL 2016
+7. verbnet (VN-Raw), ACL 2016
+8. corpus (Corpus), ACL 2016
 ```
 
 A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase. <b>NOTE</b>: You can download and use any of these features for building your model for the shared task, along with other interesting features you may conceive. The format of each SKLL feature file is:
 
 ```
-{"y": LABEL, "x": {FEATURE:VALUE}, "id": TOKENID}
+{"y": LABEL, "x": {FEATURE_NAME : FEATURE_VALUE}, "id": TOKENID}
 ```
 
-Note that when combining several feature sets, the feature name has to be unique across all feature files.
+Note that when combining several feature sets, the `FEATURE_NAME` has to be unique across all feature files.
 
 SKLL
 ---------
@@ -123,7 +123,7 @@ To illustrate how SKLL can be used, we provided a toy example here.
 
 SKLL can be installed via Conda. You can find installation instructions at the [anaconda](https://docs.anaconda.com/anaconda/install/) page.
 
-1. To start, download the baseline features and SKLL configuration file (TO INSERT DOWNLOAD LINK), then unzip it into the working directory.
+1. To start, download the [baseline features and SKLL configuration file](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_datasets.zip), then unzip it into the working directory.
 
 2. Next, run
 ```
