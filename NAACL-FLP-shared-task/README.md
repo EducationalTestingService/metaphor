@@ -124,7 +124,7 @@ Archive:  naacl_flp_test_tokens.zip
   inflating: verb_tokens_test.csv
 </pre>
 
-For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below showing two sample prediction files are arbitrary and do not necessarily indicate true labels. When you are done, you can then submit these prediction files to `Verb Testing` and `All POS Testing` respectively at the [CodaLab page](https://competitions.codalab.org/competitions/17805#participate)
+For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below showing two sample prediction files are arbitrary and do not necessarily indicate true labels. When you are done, you can then submit these prediction files to `Verb Testing` and `All POS Testing` respectively at the [CodaLab page](https://competitions.codalab.org/competitions/17805#participate).
 
 ```
 ==> all_pos_tokens_test_predictions.csv <==
