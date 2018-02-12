@@ -101,12 +101,11 @@ For example, the token identifier `a1e-fragment01_1_4` denotes text `a1e-fragmen
 
 Evaluation Phase
 ---------
-1. Download the [testing kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_testing_kit.zip) into the working directory and execute it like you would with the starter kit.
+1. Download the [testing kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_testing_kit.zip), unzip the contents into the working directory and execute the python script like you would with the starter kit.
 
 <pre>
 $ unzip naacl_flp_testing_kit.zip
 Archive:  naacl_flp_testing_kit.zip
-  inflating: setup.cfg
   inflating: vua_xml_parser_test.py
 
 $ python vua_xml_parser_test.py
@@ -115,6 +114,40 @@ $ ls vuamc*csv
 # vuamc_corpus_test.csv is generated
 vuamc_corpus_train.csv <b>vuamc_corpus_test.csv</b>
 </pre>
+
+2. Download the [test partition token IDs](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_tokens.zip), unzip the contents.
+
+<pre>
+$ unzip naacl_flp_test_tokens.zip
+Archive:  naacl_flp_test_tokens.zip
+  inflating: all_pos_tokens_test.csv
+  inflating: verb_tokens_test.csv
+</pre>
+
+For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below are arbitrary and do not necessarily indicate true labels.
+
+```
+==> all_pos_tokens_predictions.csv <==
+...
+a3m-fragment02_45_1,1
+a3m-fragment02_45_3,1
+a3m-fragment02_45_4,0
+a3m-fragment02_45_7,1
+a3m-fragment02_45_8,1
+a3m-fragment02_45_10,0
+a3m-fragment02_45_11,0
+..
+
+==> verb_tokens_predictions.csv <==
+...
+a3m-fragment02_45_3,1
+a3m-fragment02_45_21,0
+a3m-fragment02_47_8,0
+a3m-fragment02_47_11,1
+a3m-fragment02_47_13,0
+a3m-fragment02_47_18,1
+...
+```
 
 Baseline (OPTIONAL)
 ---------
