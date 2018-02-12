@@ -11,10 +11,6 @@ Task Details
 ---------
 You can either participate in the metaphor prediction tracks for verbs only, all content part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
 
-Issues
----------
-Should you have any difficulties with the shared task, please file an [issue](https://github.com/EducationalTestingService/metaphor/issues), and we will get back to you promptly.
-
 Instructions
 ---------
 
@@ -99,6 +95,23 @@ For example, the token identifier `a1e-fragment01_1_4` denotes text `a1e-fragmen
 
 5. During evaluation, token lists (without gold labels) for the test sets will be made available. The task will be to generate predictions for the test verb and all part-of-speech tokens in the same format as `verb_tokens.csv` and `all_pos_tokens.csv`, and submit it to CodaLab for evaluation.
 
+Evaluation Phase
+---------
+1. Download the [testing kit](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_testing_kit.zip) into the working directory and execute it like you would with the starter kit.
+
+<pre>
+$ unzip naacl_flp_testing_kit.zip
+Archive:  naacl_flp_testing_kit.zip
+  inflating: setup.cfg
+  inflating: vua_xml_parser_test.py
+
+$ python vua_xml_parser_test.py
+
+$ ls vuamc*csv
+# vuamc_corpus_test.csv is generated
+vuamc_corpus_train.csv <b>vuamc_corpus_test.csv</b>
+</pre>
+
 Baseline (OPTIONAL)
 ---------
 For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. We have used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll) to perform classification for the training and testing sets with published results, using a set of features outlined below.
@@ -131,7 +144,7 @@ To illustrate how SKLL can be used, we provided a toy example here.
 
 SKLL can be installed via Conda. You can find installation instructions at the [anaconda](https://docs.anaconda.com/anaconda/install/) page.
 
-1. To start, download the [baseline features and SKLL configuration file](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_datasets.zip), then unzip it into the working directory. <b>NOTE</b>: The extracted contents `toy_set`, `verbs`, `all_pos` and `toy_set.cfg` should be directly under the working directory.
+1. To start, download the [baseline features and SKLL configuration file](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_datasets.zip), then unzip it into the working directory.
 
 2. Next, run
 ```
