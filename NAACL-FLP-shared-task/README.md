@@ -124,7 +124,7 @@ Archive:  naacl_flp_test_tokens.zip
   inflating: verb_tokens_test.csv
 </pre>
 
-For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below are arbitrary and do not necessarily indicate true labels.
+For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below showing two sample prediction files are arbitrary and do not necessarily indicate true labels.
 
 ```
 ==> all_pos_tokens_test_predictions.csv <==
@@ -149,7 +149,7 @@ a3m-fragment02_47_18,1
 ...
 ```
 
-3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predictions](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. More details on how to run SKLL can be found in the [option section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predictions](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. More details on how to run SKLL can be found in the [baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
