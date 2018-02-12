@@ -11,6 +11,10 @@ Task Details
 ---------
 You can either participate in the metaphor prediction tracks for verbs only, all content part-of-speech only, or both. For a given text in VUA, and for each sentence, the task is to predict metaphoricity for each word.
 
+Issues
+----------
+Should you have any difficulties with the shared task, please file an [issue](https://github.com/EducationalTestingService/metaphor/issues), and we will get back to you promptly.
+
 Instructions
 ---------
 
@@ -144,7 +148,7 @@ To illustrate how SKLL can be used, we provided a toy example here.
 
 SKLL can be installed via Conda. You can find installation instructions at the [anaconda](https://docs.anaconda.com/anaconda/install/) page.
 
-1. To start, download the [baseline features and SKLL configuration file](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_datasets.zip), then unzip it into the working directory.
+1. To start, download the [baseline features and SKLL configuration file](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_datasets.zip), then unzip it into the working directory.  <b>NOTE</b>: The extracted contents `toy_set`, `verbs`, `all_pos` and `toy_set.cfg` should be directly under the working directory.
 
 2. Next, run
 ```
