@@ -149,7 +149,35 @@ a3m-fragment02_47_18,1
 ...
 ```
 
-3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predictions](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predict](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. Below is an example of the parameters you should change:
+
+```
+[General]
+experiment_name = news-UL-WordNet-AutoWeighting
+task = evaluate # <--- change this to predict
+
+[Input]
+train_directory = news/train # <--- SKLL training features for a specific genre
+test_directory = news/test # <--- SKLL test features  for a specific genre
+featuresets = [["UL","WordNet"]] <--- feature set you want to use for prediction
+featureset_names = ["expt"]
+learners = ["LogisticRegression"]
+suffix = .jsonlines
+fixed_parameters = [{'class_weight':'balanced'}]
+
+[Tuning]
+grid_search = true
+objective = f1_score_least_frequent
+
+[Output]
+probability = false
+results = results
+log = log
+models = models
+predictions = predictions
+```
+
+More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
