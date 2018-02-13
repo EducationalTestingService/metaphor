@@ -176,8 +176,7 @@ log = log
 models = models
 predictions = predictions
 ```
-
-More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+After running, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
