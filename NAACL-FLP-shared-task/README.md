@@ -149,19 +149,19 @@ a3m-fragment02_47_18,1
 ...
 ```
 
-3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predict](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. Below is an example of the parameters you should change:
+3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predict](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. Below is an example of the parameters you should change, marked by `<---` comments:
 
 ```
 [General]
-experiment_name = news-UL-WordNet-AutoWeighting
-task = evaluate # <--- change this to predict
+experiment_name = news-UL-WordNet-AutoWeighting <--- this should be changed for each new experiment
+task = evaluate # <--- change this to predict for making predictions
 
 [Input]
 train_directory = news/train # <--- SKLL training features for a specific genre
-test_directory = news/test # <--- SKLL test features  for a specific genre
-featuresets = [["UL","WordNet"]] <--- feature set you want to use for prediction
+test_directory = news/test # <--- SKLL test features for a specific genre. Note that test features do not have y labels populated
+featuresets = [["UL","WordNet"]] <--- feature set you want to use for training and making prediction
 featureset_names = ["expt"]
-learners = ["LogisticRegression"]
+learners = ["LogisticRegression"] <--- you can try other learners available
 suffix = .jsonlines
 fixed_parameters = [{'class_weight':'balanced'}]
 
@@ -176,7 +176,7 @@ log = log
 models = models
 predictions = predictions
 ```
-After running, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
