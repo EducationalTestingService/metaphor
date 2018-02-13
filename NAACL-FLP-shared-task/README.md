@@ -158,7 +158,7 @@ task = evaluate # <--- change this to predict for making predictions
 
 [Input]
 train_directory = news/train # <--- SKLL training features for a specific genre
-test_directory = news/test # <--- SKLL test features for a specific genre. Note that test features do not have y labels populated
+test_directory = news/test # <--- SKLL test features for a specific genre. Note that test features do not have y labels populated when used in the prediction mode
 featuresets = [["UL","WordNet"]] <--- feature set you want to use for training and making prediction
 featureset_names = ["expt"]
 learners = ["LogisticRegression"] <--- you can try other learners available
