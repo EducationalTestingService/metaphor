@@ -175,7 +175,7 @@ log = log
 models = models
 predictions = predictions
 ```
-After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+Assuming that the above configration is named 'example.cfg' and that you already have trained models previously stored in the `models` directory, you can choose to reuse those models by running `run_experiment -k example.cfg`. After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
