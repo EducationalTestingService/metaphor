@@ -171,7 +171,6 @@ objective = f1_score_least_frequent
 
 [Output]
 probability = false
-results = results
 log = log
 models = models
 predictions = predictions
