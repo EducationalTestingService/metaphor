@@ -64,11 +64,11 @@ $ ls
 ...
 ```
 
-5. Download and unzip the [training gold labels](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_gold_labels.zip) for verbs and all part-of-speech tokens:
+5. Download and unzip the [training gold labels](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_train_gold_labels.zip) for verbs and all part-of-speech tokens:
 
 ```
-$ unzip naacl_flp_gold_labels.zip
-Archive:  naacl_flp_gold_labels.zip
+$ unzip naacl_flp_train_gold_labels.zip
+Archive:  naacl_flp_train_gold_labels.zip
   inflating: all_pos_tokens.csv
   inflating: verb_tokens.csv
 
@@ -115,7 +115,7 @@ $ ls vuamc*csv
 vuamc_corpus_train.csv <b>vuamc_corpus_test.csv</b>
 </pre>
 
-2. Download the [test partition token IDs](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_tokens.zip), unzip the contents.
+2. Download the [test partition token IDs](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_tokens.zip), unzip the contents. <b>UPDATE</b>: Since the shared task has officially closed, the [testing gold labels](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_gold_labels.zip) can be downloaded here as well.
 
 <pre>
 $ unzip naacl_flp_test_tokens.zip
