@@ -27,11 +27,11 @@ feature (SKLL feature name), published venue
 
 Specifically, these are the combinations described in our paper:
 
-```
+<pre>
 <b>all-15</b>: U, P, T, CUpDown, CCDB-BiasUpDown
 <b>all-16</b>: UL, WordNet, CCDB-BiasUpDown
 <b>v-16</b>: UL, WordNet, CCDB-BiasUpDown
-```
+</pre>
 
 Each combination is used to build a logistic classification model whose predictions are used to generate metaphoricity. The format of each feature file is:
 
