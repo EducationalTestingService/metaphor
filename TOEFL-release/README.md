@@ -1,11 +1,15 @@
 # TOEFL dataset release
 
+This repository contains 180 essays in the training partition of the dataset described in the paper [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014), as well as feature sets used to generate predictions of metaphoricity for each verb/content-word in the essay.
 
-This repository contains 180 essays in the training partition of the dataset described in the paper [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014), as well as feature sets used to generate predictions of metaphoricity.
-
-Main Dataset
+Essays
 ---------
-For the shared task, we are using the [VU Amsterdam Metaphor Corpus](http://ota.ahds.ac.uk/headers/2541.xml) (VUA). There are altogether 117 texts covering four genres (academic, conver
+The essays are part of a larger dataset released in the [ETS Corpus of Non-Native Written English](https://catalog.ldc.upenn.edu/LDC2014T06). Each essay used in our experiment has been processed further to include only tokens containing `[A-Z0-9_-]` characters, and metaphors are marked with a `M_` prefix, such as:
+
+`There are other M_things he has , M_on his own M_admission , not fully investigated , like the value of the DRG properties , or which M_part of the DRG business he would M_keep M_after the break up .`
+
+Feature sets
+---------
 
 
 3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predict](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. Below is an example of the parameters you should change, marked by `<---` comments:
@@ -49,8 +53,6 @@ feature (SKLL feature name), published venue
 4. concreteness (C-BiasUp, C-BiasDown, CCDB-BiasUpDown), Meta4NLP 2015 (CUpDown as C-BiasUp + C-BiasDown)
 5. unigram lemmas (UL), ACL 2016
 6. wordnet (WordNet), ACL 2016
-7. verbnet (VN-Raw), ACL 2016
-8. corpus (Corpus), ACL 2016
 ```
 
 A combination of these features will be used to build a logistic classification model whose predictions will be used as the baseline during the evaluation phase. <b>NOTE</b>: You can download and use any of these features for building your model for the shared task, along with other interesting features you may conceive. The format of each SKLL feature file is:
