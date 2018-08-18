@@ -25,13 +25,12 @@ feature (SKLL feature name), published venue
 6. wordnet (WordNet), ACL 2016
 ```
 
-Specifically, these are the combinations:
+Specifically, these are the combinations described in our paper:
 
 ```
-all-15: U, P, T, CUpDown, CCDB-BiasUpDown
-all-16: UL, WordNet, CCDB-BiasUpDown
-v-16: UL, WordNet, CCDB-BiasUpDown
-
+<b>all-15</b>: U, P, T, CUpDown, CCDB-BiasUpDown
+<b>all-16</b>: UL, WordNet, CCDB-BiasUpDown
+<b>v-16</b>: UL, WordNet, CCDB-BiasUpDown
 ```
 
 Each combination is used to build a logistic classification model whose predictions are used to generate metaphoricity. The format of each feature file is:
@@ -44,10 +43,10 @@ Note that when combining several feature sets, the `FEATURE_NAME` has to be uniq
 
 SKLL (OPTIONAL)
 ---------
-This [section](https://github.com/EducationalTestingService/metaphor/blob/master/NAACL-FLP-shared-task/README.md#skll-optional) illustrates an example on using `SKLL` to execute experiments using the feature files.
+This [section](https://github.com/EducationalTestingService/metaphor/blob/master/NAACL-FLP-shared-task/README.md#skll-optional) illustrates an example on using `SKLL` to execute experiments using the feature files we provided here.
 
 
-If you need to cite, please use the following reference:
+For citation, please use the following reference:
 ---------
 [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014.pdf)
 Beata Beigman Klebanov, Chee Wee Leong, and Michael Flor, in Proceedings of the Proceedings of 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL), New Orleans, Louisiana, 2018
