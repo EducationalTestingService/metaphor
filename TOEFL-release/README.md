@@ -4,45 +4,14 @@ This repository contains 180 essays in the training partition of the dataset des
 
 Essays
 ---------
-The essays are part of a larger dataset released in the [ETS Corpus of Non-Native Written English](https://catalog.ldc.upenn.edu/LDC2014T06). Each essay used in our experiment has been processed further to include only tokens containing `[A-Z0-9_-]` characters, and metaphors are marked with a `M_` prefix, such as:
+The essays are part of a larger dataset released in the [ETS Corpus of Non-Native Written English](https://catalog.ldc.upenn.edu/LDC2014T06). Moreover, each essay used in our experiment has been processed further to include only tokens containing `[A-Z0-9_-]` characters, and annotated metaphors are marked with a `M_` prefix, as exemplified in the text snippet below:
 
 `There are other M_things he has , M_on his own M_admission , not fully investigated , like the value of the DRG properties , or which M_part of the DRG business he would M_keep M_after the break up .`
 
+Please send us any essay in the corpus to provide proof that you have access rights to the LDC datasets, and we will provide you with the annotated 180 training essays.
+
 Feature sets
 ---------
-
-
-3. (Optional) If you would like to use our test partition baseline features, you may do so by downloading the [SKLL test baseline features](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_skll_test_datasets.zip) and use them by setting `task` type to [predict](http://skll.readthedocs.io/en/latest/run_experiment.html#predict) when running experiments. Below is an example of the parameters you should change, marked by `<---` comments:
-
-```
-[General]
-experiment_name = news-UL-WordNet-AutoWeighting <--- this should be changed for each new experiment
-task = evaluate # <--- change this to predict for making predictions
-
-[Input]
-train_directory = news/train # <--- SKLL training features for a specific genre
-test_directory = news/test # <--- SKLL test features for a specific genre. Note that test features do not have y labels populated when used in the prediction mode
-featuresets = [["UL","WordNet"]] <--- feature set you want to use for training and making prediction
-featureset_names = ["expt"]
-learners = ["LogisticRegression"] <--- you can try other learners available
-suffix = .jsonlines
-fixed_parameters = [{'class_weight':'balanced'}]
-
-[Tuning]
-grid_search = true
-objective = f1_score_least_frequent
-
-[Output]
-probability = false
-log = log
-models = models
-predictions = predictions
-```
-Assuming that the above configration is named 'example.cfg' and that you already have trained models previously stored in the `models` directory, you can choose to reuse those models by running `run_experiment -k example.cfg`. After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
-
-Baseline (OPTIONAL)
----------
-For the shared task, you are welcome to use any machine/deep learning toolkit to generate predictions for each target token. We have used the logistic classifier in [SKLL v1.5](https://github.com/EducationalTestingService/skll) to perform classification for the training and testing sets with published results, using a set of features outlined below.
 
 ```
 feature (SKLL feature name), published venue
@@ -110,3 +79,18 @@ If you need to cite, please use the following reference:
 ---------
 [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014.pdf)
 Beata Beigman Klebanov, Chee Wee Leong, and Michael Flor, in Proceedings of the Proceedings of 16th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL), New Orleans, Louisiana, 2018
+
+
+Reference Papers
+---------
+[Semantic Classifications for Detection of Verb Metaphors](http://aclweb.org/anthology/P/P16/P16-2017.pdf)
+([erratum](https://github.com/EducationalTestingService/metaphor/blob/master/verbs/paper/metaphor_acl_2016_erratum.pdf))
+Beata Beigman Klebanov, Ben Leong, E. Dario Gutierrez, Ekaterina Shutova and Michael Flor, in Proceedings of the 54th Meeting of the Association for Computational Linguistics (ACL), 2016
+
+[Supervised Word-Level Metaphor Detection: Experiments with Concreteness and Reweighting of Examples](https://aclweb.org/anthology/W/W15/W15-1402.pdf)
+Beata Beigman Klebanov, Ben Leong, Michael Flor,
+in Proceedings of the Third Workshop on Metaphor in NLP (Meta4NLP), Denver, CO, 2015
+
+[Different Texts, Same Metaphors: Unigrams and Beyond](http://anthology.aclweb.org/W/W14/W14-2302.pdf)
+Beata Beigman Klebanov, Ben Leong, Michael Heilman and Michael Flor,
+in Proceedings of the Second Workshop on Metaphor in NLP (Meta4NLP), Baltimore, MD, 2014
