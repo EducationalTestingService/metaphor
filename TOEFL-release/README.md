@@ -10,6 +10,7 @@ The essays are part of a larger dataset released in the [ETS Corpus of Non-Nativ
 As people M_climb M_the M_ladder of success their ideas tend to change from M_dynamic and innovative to M_static and conservative .
 I believe that succesful poeple M_focus and doing what they already know how to do rather than M_exploring or trying out new things and taking risks .
 M_Reaching a M_level of success whether in bussiness or in life M_requires time and hard work , and upon M_reaching success risk would be to huge of a M_price .
+...
 ```
 
 Please send us any essay in the corpus to provide proof that you have access rights to the LDC database, and we will provide you with the annotated 180 training essays via email.
