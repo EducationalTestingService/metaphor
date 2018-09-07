@@ -17,7 +17,7 @@ Please send us any essay in the corpus to provide proof that you have access rig
 
 Feature sets
 ---------
-Our feature sets reported in the paper are combinations of constituent features conceived in earlier publications:
+Please download the feature sets [here](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_toefl_train.zip). Our feature sets reported in the paper are combinations of constituent features conceived in earlier publications:
 
 ```
 feature (SKLL feature name), published venue
