@@ -25,7 +25,7 @@ $ mkdir naacl_flp
 $ cd naacl_flp
 ```
 
-2. Download the [VUAMC.xml zip file](http://ota.ahds.ac.uk/text/2541.zip) and unzip it in the working directory.
+2. Unzip the VUAMC.xml in the working directory.
 ```
 $ unzip 2541.zip
 Archive:  2541.zip
