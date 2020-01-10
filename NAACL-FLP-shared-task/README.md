@@ -1,11 +1,11 @@
 # Shared Task on Metaphor Detection
 
 
-This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), NAACL 2018, and [Second Workshop on Figurative Language Processing](https://sites.google.com/view/figlang2020/home), ACL 2020.
+This repository contains the dataset used in the [shared task on metaphor detection](https://competitions.codalab.org/competitions/17805) in the [First Workshop on Figurative Language Processing](https://sites.google.com/site/figlangworkshop/), NAACL 2018, and the [second shared task on metaphor detection](https://competitions.codalab.org/competitions/22188) in the [Second Workshop on Figurative Language Processing](https://sites.google.com/view/figlang2020/home), ACL 2020.
 
 Main Dataset
 ---------
-For the shared task, we are using the VU Amsterdam Metaphor Corpus (VUA). There are altogether 117 texts covering four genres (academic, conversation, fiction, news). Please write to cleong@ets.org so that we can send you the XML. 
+For the shared task, we are using the VU Amsterdam Metaphor Corpus (VUA). There are altogether 117 texts covering four genres (academic, conversation, fiction, news). Please write to cleong@ets.org so that we can send you the VUA XML.
 
 Task Details
 ---------
