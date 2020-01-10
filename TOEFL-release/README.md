@@ -2,6 +2,9 @@
 
 This repository contains 180 essays in the training partition of the dataset described in the paper [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014), as well as feature sets used to generate predictions of metaphoricity for each verb/content-word in the essay.
 
+This dataset is also used in the [second shared task on metaphor detection](https://competitions.codalab.org/competitions/22188) in the [Second Workshop on Figurative Language Processing](https://sites.google.com/view/figlang2020/home), ACL 2020.
+
+
 Essays
 ---------
 The essays are part of a larger dataset released in the [ETS Corpus of Non-Native Written English](https://catalog.ldc.upenn.edu/LDC2014T06). Moreover, each essay used in our experiment has been processed further to include only tokens containing `[A-Z0-9_-]` characters, and annotated metaphors are marked with a `M_` prefix, as exemplified in the text snippet below:
