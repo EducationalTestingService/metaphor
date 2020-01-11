@@ -249,9 +249,11 @@ Once the experiment is completed, you should be able to look into `results` dire
 Reference Papers
 ---------
 **Main Reference**: 
+
 [A report on the 2018 VUA metaphor detection shared task](https://www.aclweb.org/anthology/W18-0907/), Ben Leong, Beata Beigman Klebanov, and Ekaterina Shutova, in Proceedings of the Workshop on Figurative Language Processing, 2018.
 
-**Other References**
+**Other References**:
+
 [Semantic Classifications for Detection of Verb Metaphors](http://aclweb.org/anthology/P/P16/P16-2017.pdf)
 ([erratum](https://github.com/EducationalTestingService/metaphor/blob/master/verbs/paper/metaphor_acl_2016_erratum.pdf)), 
 Beata Beigman Klebanov, Ben Leong, E. Dario Gutierrez, Ekaterina Shutova and Michael Flor, in Proceedings of the 54th Meeting of the Association for Computational Linguistics (ACL), 2016
