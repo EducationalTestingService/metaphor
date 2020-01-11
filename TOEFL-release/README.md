@@ -1,6 +1,6 @@
 # TOEFL dataset release
 
-This repository contains 180 (train)/60 (test) essays in the dataset described in the paper [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014), as well as feature sets used to generate predictions of metaphoricity for each verb/content-word in the essay.
+This repository contains 180 (train) / 60 (test) essays in the dataset described in the paper [A Corpus of Non-Native Written English Annotated for Metaphor](http://www.aclweb.org/anthology/N18-2014), as well as feature sets used to generate predictions of metaphoricity for each verb/content-word in the essay.
 
 This dataset is also used in the [second shared task on metaphor detection](https://competitions.codalab.org/competitions/22188) in the [Second Workshop on Figurative Language Processing](https://sites.google.com/view/figlang2020/home), ACL 2020.
 
