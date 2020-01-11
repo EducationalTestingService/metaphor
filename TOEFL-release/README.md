@@ -16,7 +16,7 @@ M_Reaching a M_level of success whether in bussiness or in life M_requires time 
 ...
 ```
 
-Please send us any essay in the corpus to provide proof that you have access rights to the LDC database, and we will provide you with the annotated 180 training essays via email.
+Please write to Ben Leong (cleong@ets.org) to obtain the essays annotated with metaphors.
 
 Feature sets
 ---------
