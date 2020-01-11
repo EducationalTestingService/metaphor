@@ -6,7 +6,7 @@ Please refer to each of the following sub-directories for further references on 
 
 * For content-word classification, please go to this [README](https://github.com/EducationalTestingService/metaphor/blob/master/content-words/README.md)
 
-* For the VUA dataset used in the first metaphor shared task in NAACL 2018, or second such shared task in ACL 2020, please go to this [README](https://github.com/EducationalTestingService/metaphor/blob/master/NAACL-FLP-shared-task/README.md)
+* For the VUA dataset used in the first metaphor shared task in NAACL 2018, or second such shared task in ACL 2020, please go to this [README](https://github.com/EducationalTestingService/metaphor/tree/master/VUA-shared-task)
 
 * For the TOEFL dataset used in the second shared task on metaphor detection in ACL 2020, please go to this [README](https://github.com/EducationalTestingService/metaphor/tree/master/TOEFL-release)
 
