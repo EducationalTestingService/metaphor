@@ -125,7 +125,7 @@ Archive:  naacl_flp_test_tokens.zip
   inflating: verb_tokens_test.csv
 </pre>
 
-For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below showing two sample prediction files are arbitrary and do not necessarily indicate true labels. When you are done, you can then submit these prediction files to `Verb Testing` and `All POS Testing` respectively at the [CodaLab page](https://competitions.codalab.org/competitions/17805#participate).
+For each token list, you will generate a metaphor label of 0 or 1 (1 indicating a prediction of metaphor) for each token and append it using a comma as a delimiter. Examples below showing two sample prediction files are arbitrary and do not necessarily indicate true labels. When you are done, you can then submit these prediction files to `Verb Testing` and `All POS Testing` respectively at the [CodaLab page](https://competitions.codalab.org/competitions/22188#participate).
 
 ```
 ==> all_pos_tokens_test_predictions.csv <==
@@ -176,7 +176,7 @@ log = log
 models = models
 predictions = predictions
 ```
-Assuming that the above configration is named 'example.cfg' and that you already have trained models previously stored in the `models` directory, you can choose to reuse those models by running `run_experiment -k example.cfg`. After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/NAACL-FLP-shared-task#baseline-optional) below.
+Assuming that the above configration is named 'example.cfg' and that you already have trained models previously stored in the `models` directory, you can choose to reuse those models by running `run_experiment -k example.cfg`. After running the experiments, you will find binary predictions generated for each token under the `predictions` output directory. You can format these predictions into the format required for CodaLab submission. More details on how to run SKLL can be found in the [Baseline optional section](https://github.com/EducationalTestingService/metaphor/tree/master/VUA-shared-task#baseline-optional) below.
 
 Baseline (OPTIONAL)
 ---------
