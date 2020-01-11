@@ -16,7 +16,7 @@ M_Reaching a M_level of success whether in bussiness or in life M_requires time 
 ...
 ```
 
-Please write to Ben Leong (cleong@ets.org) to obtain the essays annotated with metaphors.
+Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets.
 
 Feature sets
 ---------
