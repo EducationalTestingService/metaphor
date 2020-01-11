@@ -115,8 +115,8 @@ $ ls vuamc*csv
 vuamc_corpus_train.csv <b>vuamc_corpus_test.csv</b>
 </pre>
 
-2. Download the [test partition token IDs](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_tokens.zip), unzip the contents. <b>UPDATE</b>: Since the shared task has officially closed, the [testing gold labels](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_gold_labels.zip) can be downloaded here as well.
-<b>UPDATE (12/5/2019)</b>: Given that we are going to organize the second shared task on metaphor detection (VUA, along with another dataset) in ACL 2020, we will temporarily remove the test labels to ensure fair participation.
+2. Download the [test partition token IDs](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_tokens.zip), unzip the contents. The [testing gold labels](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/naacl_flp_test_gold_labels.zip) can be downloaded here as well.
+<b>UPDATE (12/5/2019)</b>: Given that we are going to organize the second shared task on metaphor detection (VUA, along with another dataset) in ACL 2020, we will temporarily remove the testing gold labels to ensure fair participation.
 
 <pre>
 $ unzip naacl_flp_test_tokens.zip
@@ -248,6 +248,8 @@ Once the experiment is completed, you should be able to look into `results` dire
 
 Reference Papers
 ---------
+Main: [A report on the 2018 VUA metaphor detection shared task](https://www.aclweb.org/anthology/W18-0907/)Ben Leong, Beata Beigman Klebanov, and Ekaterina Shutova, in Proceedings of the Workshop on Figurative Language Processing, 2018.
+
 [Semantic Classifications for Detection of Verb Metaphors](http://aclweb.org/anthology/P/P16/P16-2017.pdf)
 ([erratum](https://github.com/EducationalTestingService/metaphor/blob/master/verbs/paper/metaphor_acl_2016_erratum.pdf))
 Beata Beigman Klebanov, Ben Leong, E. Dario Gutierrez, Ekaterina Shutova and Michael Flor, in Proceedings of the 54th Meeting of the Association for Computational Linguistics (ACL), 2016
