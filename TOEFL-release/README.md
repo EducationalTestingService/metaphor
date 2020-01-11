@@ -51,7 +51,7 @@ Note that when combining several feature sets, the `FEATURE_NAME` has to be uniq
 
 SKLL (OPTIONAL)
 ---------
-This [section](https://github.com/EducationalTestingService/metaphor/blob/master/NAACL-FLP-shared-task/README.md#skll-optional) illustrates an example on using `SKLL` to execute experiments using the feature files we provided here.
+This [section](https://github.com/EducationalTestingService/metaphor/tree/master/VUA-shared-task#skll-optional) illustrates an example on using `SKLL` to execute experiments using the feature files we provided here.
 
 
 For citation, please use the following reference:
