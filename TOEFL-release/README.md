@@ -20,7 +20,7 @@ Please download the agreement here, fill it out, and send it to Chris Hamill (ch
 
 Feature sets
 ---------
-Please download the feature sets [here](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/toefl_skll_train_features.zip). Our feature sets reported in the paper are combinations of constituent features conceived in earlier publications:
+Please download the feature sets: [training](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/toefl_skll_train_features.zip) and [testing](https://github.com/EducationalTestingService/metaphor/releases/download/v1.0/toefl_skll_test_features_no_labels.zip) Our feature sets reported in the paper are combinations of constituent features conceived in earlier publications:
 
 ```
 feature (SKLL feature name), published venue
