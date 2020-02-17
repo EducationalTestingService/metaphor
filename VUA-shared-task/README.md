@@ -27,7 +27,7 @@ $ cd naacl_flp
 
 2. Unzip the VUAMC.xml in the working directory.
 ```
-$ unzip 2541.zip
+$ unzip 2541.zip # or VUA_corpus.zip
 Archive:  2541.zip
   inflating: 2541/VUAMC.odd
   inflating: 2541/VUAMC.rnc
