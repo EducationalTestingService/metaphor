@@ -5,7 +5,7 @@ This repository contains the dataset used in the [shared task on metaphor detect
 
 Main Dataset
 ---------
-For the shared task, we are using the VU Amsterdam Metaphor Corpus (VUA). There are altogether 117 texts covering four genres (academic, conversation, fiction, news). Up until recently, VUAMC.xml was downloadable via this [link]( http://ota.ahds.ac.uk/headers/2541.xml), but right now the site appears unresponsive. We have written to the Amsterdam Metaphor Lab to ask them to fix the problem; once the original site becomes responsive or we learn of an alternative download link, we will post a note here. In the meanwhile, please write to Ben Leong (cleong@ets.org) to obtain the copy that we used for the 2018 shared task.
+For the shared task, we are using the VU Amsterdam Metaphor Corpus (VUA). There are altogether 117 texts covering four genres (academic, conversation, fiction, news). Up until recently, VUAMC.xml was downloadable via this [link]( http://ota.ahds.ac.uk/headers/2541.xml), but right now the site appears unresponsive. We have written to the Amsterdam Metaphor Lab to ask them to fix the problem; once the original site becomes responsive or we learn of an alternative download link, we will post a note here. Initially, we are able to distribute the dataset during the shared task period. That said, the participation period for both 2018/2020 shared tasks have concluded. And, we are sorry but this means that we are no longer allowed to distribute the VUA corpus at this point. Please contact the [VUA metaphor team](http://www.vismet.org/metcor/documentation/contact.html) to obtain a copy for your own research.
 
 Task Details
 ---------
