@@ -248,7 +248,10 @@ Once the experiment is completed, you should be able to look into `results` dire
 
 Reference Papers
 ---------
-**Main Reference**: 
+**Main References**: 
+
+
+[A report on the 2020 VUA metaphor detection shared task](https://www.aclweb.org/anthology/2020.figlang-1.3.pdf) Ben Leong, Beata Beigman Klebanov, Chris Hamill1, Egon Stemle, Rutuja Ubale and and Xianyang Chen, in Proceedings of the Workshop on Figurative Language Processing, 2020.
 
 [A report on the 2018 VUA metaphor detection shared task](https://www.aclweb.org/anthology/W18-0907/), Ben Leong, Beata Beigman Klebanov, and Ekaterina Shutova, in Proceedings of the Workshop on Figurative Language Processing, 2018.
 
