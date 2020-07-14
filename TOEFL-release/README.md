@@ -16,7 +16,7 @@ M_Reaching a M_level of success whether in bussiness or in life M_requires time 
 ...
 ```
 
-Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets.
+Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets. NOTE: The 2020 shared task participation period has concluded. We are now working on another agreement that allows researchers to access the dataset beyond the shared task. Stay tuned!
 
 Feature sets
 ---------
