@@ -16,7 +16,7 @@ M_Reaching a M_level of success whether in bussiness or in life M_requires time 
 ...
 ```
 
-Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets. <b>NOTE: The 2020 shared task participation period has concluded. Please fill out this agreement that would allow researchers to access the dataset beyond the shared task.</b>
+ <b>NOTE: The 2020 shared task participation period has concluded. Please fill out [this agreement](https://github.com/EducationalTestingService/metaphor/blob/master/TOEFL-release/TOEFL_data_license_agreement%20_post_sharedtask%20.docx) that would allow researchers to access the dataset (240 essay tests for training and testing) beyond the shared task.</b>
 
 Feature sets
 ---------
