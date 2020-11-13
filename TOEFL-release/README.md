@@ -16,7 +16,7 @@ M_Reaching a M_level of success whether in bussiness or in life M_requires time 
 ...
 ```
 
-Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets. <b>NOTE: The 2020 shared task participation period has concluded. We are now working on another agreement that would allow researchers to access the dataset beyond the shared task. Stay tuned! Alternatively, if you have access to LDC, you can send us a small sample (5 random essays) from the original [ETS Corpus of Non-Native Written English which the TOEFL dataset](https://catalog.ldc.upenn.edu/LDC2014T06), and we can then provide you metaphor labels for the 240 texts. </b>
+Please download the agreement here, fill it out, and send it to Chris Hamill (chamill@ets.org). Chris will contact the individuals and teams who completed and submitted the agreement on how to access the 240 texts on the release dates of the training and testing datasets. <b>NOTE: The 2020 shared task participation period has concluded. Please fill out this agreement that would allow researchers to access the dataset beyond the shared task.</b>
 
 Feature sets
 ---------
