@@ -52,6 +52,36 @@ $ ls
 2541 2541.xml 2541.zip naacl_flp_starter_kit.zip setup.cfg vua_xml_parser.py <b>vuamc_corpus_train.csv</b>
 </pre>
 
+If an error similar to `ModuleNotFoundError: No module named 'lxml'` is thrown, edit `vua_xml_parser.py` and replace `import lxml.etree as ET` by the following:
+```
+try:
+  from lxml import ET
+  print("running with lxml.etree")
+except ImportError:
+  try:
+    # Python 2.5
+    import xml.etree.cElementTree as ET
+    print("running with cElementTree on Python 2.5+")
+  except ImportError:
+    try:
+      # Python 2.5
+      import xml.etree.ElementTree as ET
+      print("running with ElementTree on Python 2.5+")
+    except ImportError:
+      try:
+        # normal cElementTree install
+        import cElementTree as ET
+        print("running with cElementTree")
+      except ImportError:
+        try:
+          # normal ElementTree install
+          import elementtree.ElementTree as ET
+          print("running with ElementTree")
+        except ImportError:
+          print("Failed to import ElementTree from any known place")
+
+```
+
 4. `vuamc_corpus_train.csv` has 12123 lines in the following format. The `txt_id` is the ID of each text provided in the VUAMC.xml, `sentence_id` is the ID of the sentence within a given text. Any token marked with `M_` denotes a metaphor, while the lack of which denotes a non-metaphor.
 
 ```
